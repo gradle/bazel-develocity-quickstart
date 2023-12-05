@@ -1,0 +1,17 @@
+# Import the user-specific settings that are set by provision_bazelrc.sh
+# This will include the Develocity Server and Access Key 
+try-import %workspace%/user.bazelrc
+
+# Without setting these 2 values, build scan data will not be complete
+common:develocity --build_event_publish_all_actions=true
+common:develocity --noslim_profile
+
+# These two lines set the Project ID for Project Level Access Control
+common:develocity --bes_instance_name=bazel-java-quickstart
+common:develocity --remote_instance_name=bazel-java-quickstart
+
+# Uses the above configurations for build/test
+build --config=develocity
+
+# Will execute the scan_data.sh script on each build/test to get environment variables
+build --workspace_status_command=$(pwd)/user_data.sh
