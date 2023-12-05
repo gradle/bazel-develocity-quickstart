@@ -3,5 +3,8 @@
 SERVER=$1
 KEY=$2
 
-FLAGS="--remote_cache=grpcs://${SERVER} --bes_backend=grpcs://${SERVER} --bes_results_url=https://${SERVER}/build --remote_header=Authorization=${KEY} --bes_header=Authorization=${KEY}"
-echo "common:develocity ${FLAGS}" > user.bazelrc
+echo "common:develocity --remote_cache=grpcs://${SERVER}" > user.bazelrc
+echo "common:develocity --bes_backend=grpcs://${SERVER}" >> user.bazelrc
+echo "common:develocity --bes_results_url=https://${SERVER}/build" >> user.bazelrc
+echo "common:develocity --remote_header=Authorization=${KEY}" >> user.bazelrc
+echo "common:develocity --bes_header=Authorization=${KEY}" >> user.bazelrc
