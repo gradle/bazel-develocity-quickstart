@@ -1,6 +1,6 @@
-# Gradle Enterprise Bazel Quickstart
+# Develocity Bazel Quickstart
 
-This project should help you quickly setup and test GE's Bazel functionality. 
+This project should help you quickly setup and test Develocity's [Bazel](https://bazel.build) functionality. 
 
 ## Setup
 
@@ -11,6 +11,8 @@ You need two things to start using Bazel with Develocity:
 Then run 
 
 ``./provision_bazelrc.sh <server_address> <key>`` from this folder to provision a .bazelrc that will let you talk to the server. 
+
+_Note: Exclude any 'https://' prefixes from the server_address_
 
 ## Smoke test
 
@@ -26,3 +28,7 @@ INFO: Streaming build results to: https://ge-bazel-dogfooding.grdev.net/build/cd
 ..
 ```
 Open the link to see the build scan.
+
+
+## Develocity Bazel Configuration Documentation
+For further information about configuring Develocity for Bazel, please see our [public documentation](https://docs.gradle.com/enterprise/bazel-configuration/)
