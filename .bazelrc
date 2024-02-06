@@ -1,0 +1,3 @@
+common:bbarn_exec --host_platform=//:linux_x86 --platforms=//:linux_x86 --extra_execution_platforms=//:linux_x86 --java_runtime_version=remotejdk_11  --remote_executor=grpc://ac59f395e6e1e4a50873695810277b2c-1494329185.us-east-1.elb.amazonaws.com:8980
+common:local_scans --bes_backend=grpc://localhost:6012 --bes_results_url=http://localhost:5086/build/
+common:bbarn_cache  --remote_cache=grpc://ac59f395e6e1e4a50873695810277b2c-1494329185.us-east-1.elb.amazonaws.com:8980
