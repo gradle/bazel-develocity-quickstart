@@ -8,3 +8,7 @@ user.bazelrc
 [._]ss[a-gi-z]
 [._]sw[a-p]
 .gitignore
+
+# Bazel profile and BEP captures
+*profile.json
+*bep.json
