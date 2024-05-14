@@ -1,5 +1,6 @@
 .DS_Store
 bazel-*
+user.bazelrc
 [._]*.s[a-v][a-z]
 !*.svg  # comment out if you don't need vector files
 [._]*.sw[a-p]
@@ -7,3 +8,7 @@ bazel-*
 [._]ss[a-gi-z]
 [._]sw[a-p]
 .gitignore
+
+# Bazel profile and BEP captures
+*profile.json
+*bep.json
