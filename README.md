@@ -11,7 +11,7 @@ You need three things to start using Bazel with Develocity:
   
 Then run 
 
-``./provision_bazelrc.sh <server_address> <key>`` from this folder to provision a `user.bazelrc` file that will include the necessary settings to allow Bazel to communicate with the Develocity server. This file will be private, and unique to you.
+``./provision_bazelrc.sh --server <server_address> --key <key>`` from this folder to provision a `user.bazelrc` file that will include the necessary settings to allow Bazel to communicate with the Develocity server. This file will be private, and unique to you.
 
 _Note: Exclude any `https://` prefixes from the `server_address`_
 
