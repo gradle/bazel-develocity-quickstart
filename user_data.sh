@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # If you would like to change the scan's username, you can do so by un-commenting & hard-coding it here.
 # echo BUILD_USER $USER
