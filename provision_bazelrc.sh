@@ -55,15 +55,14 @@ fi
 echo -n "" > user.bazelrc
 
 # Write configurations to user.bazelrc
-echo "common:develocity --remote_cache=${BES_URI_SCHEME}://${CACHE_HOST}" >> user.bazelrc
-echo "common:develocity --bes_backend=${BES_URI_SCHEME}://${CACHE_HOST}" >> user.bazelrc
-echo "common:develocity --bes_results_url=${DV_URI_SCHEME}://${DEVELOCITY_HOST}/build" >> user.bazelrc
-# Write bes_instance_name to user.bazelrc
-echo "common:develocity --bes_instance_name=${PROJECT_ID}" >> user.bazelrc
+echo "build:develocity --remote_cache=${BES_URI_SCHEME}://${CACHE_HOST}" >> user.bazelrc
+echo "build:develocity --bes_backend=${BES_URI_SCHEME}://${CACHE_HOST}" >> user.bazelrc
+echo "build:develocity --bes_results_url=${DV_URI_SCHEME}://${DEVELOCITY_HOST}/build" >> user.bazelrc
+echo "build:develocity --bes_instance_name=${PROJECT_ID}" >> user.bazelrc
 
 if [[ -n "$KEY" ]]; then
-  echo "common:develocity --remote_header=Authorization=\"Bearer ${KEY}\"" >> user.bazelrc
-  echo "common:develocity --bes_header=Authorization=\"Bearer ${KEY}\"" >> user.bazelrc
+  echo "build:develocity --remote_header=Authorization=\"Bearer ${KEY}\"" >> user.bazelrc
+  echo "build:develocity --bes_header=Authorization=\"Bearer ${KEY}\"" >> user.bazelrc
 fi
 
 # Validate Bazel version
