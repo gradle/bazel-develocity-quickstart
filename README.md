@@ -11,7 +11,7 @@ You need three things to start using Bazel with Develocity:
   
 Then run 
 
-``./provision_bazelrc.sh --develocity-host <develocity_host> [--cache-host <cache_host>] [--key <key>] [--insecure]`` from this folder to provision a `user.bazelrc` file that will include the necessary settings to allow Bazel to communicate with the Develocity server. This file will be private, and unique to you.
+``./provision_bazelrc.sh --develocity-host <develocity_host> [--cache-host <cache_host>] [--project-id <project_id>] [--key <key>] [--insecure]`` from this folder to provision a `user.bazelrc` file that will include the necessary settings to allow Bazel to communicate with the Develocity server. This file will be private, and unique to you.
 
 - `--develocity-host` is mandatory and specifies the host name and port for Build Scan results. It must not include the URI scheme.
 - `--cache-host` is optional and specifies the host name and port for remote cache and BES backend. If not provided, it defaults to the value of `--develocity-host`. It must not include the URI scheme.
