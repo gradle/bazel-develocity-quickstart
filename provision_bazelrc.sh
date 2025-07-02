@@ -70,6 +70,6 @@ BAZEL_VERSION=$(bazel --version | awk '{print $2}')
 BAZEL_MAJOR_VERSION=$(echo "$BAZEL_VERSION" | cut -d '.' -f 1)
 
 if [[ "$BAZEL_MAJOR_VERSION" -gt 6 ]]; then
-  echo "common:develocity --noenable_bzlmod" >> user.bazelrc
-  echo "common:develocity --enable_workspace" >> user.bazelrc
+  echo "build:develocity --noenable_bzlmod" >> user.bazelrc
+  echo "build:develocity --enable_workspace" >> user.bazelrc
 fi
