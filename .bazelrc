@@ -8,7 +8,7 @@ common:develocity --noslim_profile
 common:develocity --experimental_collect_system_network_usage
 
 # Will execute the user_data.sh script on each build/test to add custom values, links, and tags in the Build Scan data
-build:develocity --workspace_status_command=%workspace%/user_data.sh
+build:develocity --workspace_status_command=$(pwd)/user_data.sh
 
 # Uses the above configurations for build/test
 build --config=develocity
