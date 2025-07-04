@@ -6,6 +6,18 @@ KEY=""
 INSECURE=false
 PROJECT_ID="bazel-develocity-quickstart"
 
+print_help() {
+  echo "Usage: $0 [OPTIONS]"
+  echo
+  echo "Options:"
+  echo "  --develocity-host HOST   (required) Develocity host name and port"
+  echo "  --cache-host HOST        Remote cache host name and port (defaults to the value provided with \`--develocity-host\`)"
+  echo "  --project-id ID          Project ID (defaults to \`bazel-develocity-quickstart\`)"
+  echo "  --key KEY                Access key"
+  echo "  --insecure               Use insecure (non-TLS) connections to connect to Develocity and the remote cache"
+  echo "  -h, --help               Show this help message and exit"
+}
+
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --develocity-host)
@@ -30,8 +42,13 @@ while [[ $# -gt 0 ]]; do
       DV_URI_SCHEME=http
       shift
       ;;
+    -h|--help)
+      print_help
+      exit 0
+      ;;
     *)
       echo "Unknown parameter: $1"
+      echo "Use -h or --help to see usage."
       exit 1
       ;;
   esac
