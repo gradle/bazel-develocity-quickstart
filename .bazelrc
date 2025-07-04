@@ -2,7 +2,7 @@
 # This will include the Develocity Server and Access Key 
 try-import %workspace%/user.bazelrc
 
-# Without setting these 2 values, Build Scan data will not be complete
+# Without setting these 3 values, Build Scan data will not be complete
 common:develocity --build_event_publish_all_actions=true
 common:develocity --noslim_profile
 common:develocity --experimental_collect_system_network_usage
