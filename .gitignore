@@ -1,14 +1,21 @@
+# macOS
 .DS_Store
+
+# Bazel output and private `user.bazelrc` file
 bazel-*
 user.bazelrc
-[._]*.s[a-v][a-z]
-!*.svg  # comment out if you don't need vector files
-[._]*.sw[a-p]
-[._]s[a-rt-v][a-z]
-[._]ss[a-gi-z]
-[._]sw[a-p]
-.gitignore
 
 # Bazel profile and BEP captures
 *profile.json
 *bep.json
+
+# IntelliJ files
+.ijwb/
+
+# This example project uses the legacy workspace approach
+# Running ./provision_bazelrc.sh will set the appropriate
+# flags to prevent Bazel from working with modules, but
+# IntelliJ doesn't seem to pick those up when sync'ing.
+MODULE.bazel
+MODULE.bazel.lock
+
