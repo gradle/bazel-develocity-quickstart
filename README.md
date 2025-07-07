@@ -93,7 +93,7 @@ Talk to us on the [Gradle forum][gradle-forum].
 
 ## License
 
-The Maven Build Scan® quickstart project is open-source software released under the [Apache 2.0 License][apache-license].
+The Bazel Develocity® quickstart project is open-source software released under the [Apache 2.0 License][apache-license].
 
 [apache-license]: https://www.apache.org/licenses/LICENSE-2.0.html
 [manual]: https://docs.gradle.com/develocity/bazel-configuration/
