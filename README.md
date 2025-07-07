@@ -1,6 +1,8 @@
-# Develocity Bazel Quickstart
+# Bazel Develocity® quickstart
 
-This project should help you quickly setup and test Develocity's [Bazel](https://bazel.build) functionality. 
+This is an example project that you can use to experience the [Build Scan® service of Develocity][gradle.com].
+
+Follow the instructions in the following section to set up Bazel to publish Build Scan® data to a Develocity server.
 
 ## Setup
 
