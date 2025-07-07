@@ -21,7 +21,7 @@ Then run
 - `--key` is optional and provides the access key for authentication.
 - `--insecure` is optional and switches the URI schemes for the Develocity and cache addresses to `http` and `grpc` instead of `https` and `grpcs`.
 
-## Example Setups
+## Example setups
 
 Here are a few example usages of `./provision_bazelrc.sh`:
 
