@@ -1,6 +1,23 @@
-# Develocity Bazel Quickstart
+# Bazel Develocity® quickstart
 
-This project should help you quickly setup and test Develocity's [Bazel](https://bazel.build) functionality. 
+This is an example project that you can use to experience the [Build Scan® service of Develocity][gradle.com].
+
+Follow the instructions in the following section to set up Bazel to publish Build Scan® data to a Develocity server.
+
+## Create a Build Scan®
+
+Follow these simple steps to create and publish a Build Scan®:
+
+1. Clone this project
+2. Follow the instructions in the [Setup](#Setup) section
+3. Run `bazel test ...`
+
+The build should end with something similar to:
+
+    INFO: Invocation ID: cd2f892e-05cd-4c53-b4fe-10cedfaeb6f3
+    INFO: Streaming build results to: https://develocity.example.com/build/cd2f892e-05cd-4c53-b4fe-10cedfaeb6f3
+
+Follow the link shown at the end of the build to view your Build Scan®.
 
 ## Setup
 
@@ -19,7 +36,7 @@ Then run
 - `--key` is optional and provides the access key for authentication.
 - `--insecure` is optional and switches the URI schemes for the Develocity and cache addresses to `http` and `grpc` instead of `https` and `grpcs`.
 
-## Example Setups
+### Example setups
 
 Here are a few example usages of `./provision_bazelrc.sh`:
 
@@ -59,22 +76,26 @@ Here are a few example usages of `./provision_bazelrc.sh`:
    ```
    This sets up the `user.bazelrc` file using `develocity.example.com` for Build Scan results and remote cache/BES backend, and specifies `custom-project` as the `bes_instance_name`.
 
-## Smoke test
+## Experiment with Build Scans
 
-```
-bazel test ...
-```
+Create different kinds of Build Scans by locally modifying this quickstart project. Here are some ideas:
 
-to quickly see the caching and scans functionality. A few tests have been made flaky on purpose so that you can see how they are displayed in the "Tests" dashboard.
+- Edit `src/main/java/com/myproject/consumer/Consumer.java` to introduce compile errors
+- Fix the flaky tests in `src/test/java/com/myproject/consumer/ConsumerTest.java`
 
-You should see a link at the beginning of the build, and also at the end, similar to:
+## Learn more
 
-```
-INFO: Invocation ID: cd2f892e-05cd-4c53-b4fe-10cedfaeb6f3
-INFO: Streaming build results to: https://develocity.example.com/build/cd2f892e-05cd-4c53-b4fe-10cedfaeb6f3
-```
-Open the link to see the Build Scan report.
+Read the [Develocity Bazel Configuration User Manual][manual] to learn more about the Build Scan® service of Develocity, build caching and the Develocity support for Bazel.
 
-## Develocity Bazel Configuration Documentation
+## Need help?
 
-For further information about configuring Develocity for Bazel, please see our [public documentation](https://docs.gradle.com/develocity/bazel-configuration/).
+Talk to us on the [Gradle forum][gradle-forum].
+
+## License
+
+The Bazel Develocity® quickstart project is open-source software released under the [Apache 2.0 License][apache-license].
+
+[apache-license]: https://www.apache.org/licenses/LICENSE-2.0.html
+[manual]: https://docs.gradle.com/develocity/bazel-configuration/
+[gradle.com]: https://www.gradle.com
+[gradle-forum]: https://discuss.gradle.org/c/help-discuss/scans
